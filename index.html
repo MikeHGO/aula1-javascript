@@ -90,7 +90,31 @@
 
             var n1 = 5;
             var result = (n1 >= 10) ? 10: 0;
-            console.log(result);
+            console.log("Resultado:",result);
+
+            // Objeto
+            var person = {
+                nome: "Maria",
+                sexo: "Feminino",
+                idade: 20,
+                endereco: {
+                    rua: "Rua vinte e quatro",
+                    numero: 123,
+                    referencias: ["primeiro", "segundo"]
+                }
+            };
+            person.nome = "Maria da Silva Fulana";
+            console.log("Person idade:",person.idade);
+            console.log(person);
+
+            var nome = person["nome"]; // person.nome
+            var propriedade = "endereco";
+            var rua = person[propriedade]["rua"];
+            console.log("Nome:",nome);
+            console.log(rua);
+            console.log(person["endereco"].referencias[1]);
+
+            
         </script>
     </body>
     <!-- Extensão Live Server v Go Live-->
