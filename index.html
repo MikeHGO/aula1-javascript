@@ -101,6 +101,9 @@
                     rua: "Rua vinte e quatro",
                     numero: 123,
                     referencias: ["primeiro", "segundo"]
+                },
+                display: function() {
+                    console.log("oi");
                 }
             };
             person.nome = "Maria da Silva Fulana";
@@ -114,7 +117,76 @@
             console.log(rua);
             console.log(person["endereco"].referencias[1]);
 
+            //Funções
+            function printMessage() {
+                console.log("mensagem..");
+            }
+            printMessage();
+
+            function calcular(n1, n2) {
+                return n1 * n2;
+            }
+            var resultado = calcular(5, 10);
+            console.log(calcular(2, 4));
+
+            var printMessage2 = function () {
+                console.log("outra mensagem");
+            }
+            printMessage2();
             
+            // Criando funções como variáveis
+            var printMessage2 = function (mensagem) {
+                console.log("Texto:"+mensagem);
+            }
+            
+            var calculate2 = function (n1, n2) {
+                printMessage2("olá, tudo bem?");
+                var color = "azul";
+                return n1 / n2;
+            }
+            
+            /* Cria uma função que recebe um valor (mensagem) como parâmetro,
+            e uma função responsável por imprimir uma mensagem
+            
+            */
+            var print = function (value, printFunction, user) {
+                printFunction(value);
+                console.log(user)
+                user.display();
+            }
+            print("Aluhamora", printMessage2, person);
+            
+            var count = 0;
+            while(count <= 2) {
+                console.log(count);
+                count++;// count = count +1;
+            }
+
+            var count2 = 3;
+            // vai executar pelo menos uma vez se a condição de para for false
+            do {
+                console.log("Count2 =", count2);
+                count2++;
+            } while(count2 <=2);
+
+
+            for (var i = 0; i < 4; i++) {
+                console.log("i =", i);
+            }
+
+            console.log("For decrescente");
+            for (var i = 50; i >= 20; i -= 10){
+                console.log("i =",i);           
+            }
+            
+            var linha = 1;
+            console.log("Linha =", i++);
+            console.log("Linha após =", i);
+
+            var coluna = 1;
+            console.log("Coluna =", ++coluna);
+            console.log("Coluna após =", coluna);
+
         </script>
     </body>
     <!-- Extensão Live Server v Go Live-->
